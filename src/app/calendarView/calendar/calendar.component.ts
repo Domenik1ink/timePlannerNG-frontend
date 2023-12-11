@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {CalendarMonthRowComponent} from "../calendar-monthRow/calendar-monthRow.component";
 import {NgForOf} from "@angular/common";
+import {CalendarMonthRowComponent} from "../calendar-monthRow/calendar-monthRow.component";
+
 
 @Component({
   selector: 'app-calendar',

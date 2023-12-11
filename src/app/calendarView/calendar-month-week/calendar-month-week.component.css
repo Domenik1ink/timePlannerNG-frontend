@@ -1,0 +1,9 @@
+.weekWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.weekday {
+    border: 1px solid black;
+}
