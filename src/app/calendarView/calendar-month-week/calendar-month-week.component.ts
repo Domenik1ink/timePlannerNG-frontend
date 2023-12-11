@@ -9,14 +9,19 @@ import { Component } from '@angular/core';
 })
 export class CalendarMonthWeekComponent {
     date:string[] = [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7"
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07"
     ];
     kw:string = "KW 01"
 
+    protected readonly openMenu = openMenu;
+}
+
+function openMenu() {
+    alert("success");
 }

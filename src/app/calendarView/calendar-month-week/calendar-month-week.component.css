@@ -1,9 +1,16 @@
-.weekWrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+td:hover:not(:first-child) {
+    cursor: pointer;
+    filter: brightness(85%);
 }
 
-.weekday {
-    border: 1px solid black;
+.rowHeader {
+    background: rgba(0,0,0, 0.05);
+}
+
+.weekend {
+    background-color: lightyellow;
+
+    &:hover {
+        cursor: default !important;
+    }
 }
