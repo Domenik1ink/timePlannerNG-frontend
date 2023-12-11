@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-calendar-month-week',
+  selector: '[app-calendar-month-week]',
   standalone: true,
   imports: [],
   templateUrl: './calendar-month-week.component.html',
