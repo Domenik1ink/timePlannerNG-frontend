@@ -1,6 +1,13 @@
-td:hover:not(:first-child) {
-    cursor: pointer;
-    filter: brightness(85%);
+td {
+    &:hover:not(:first-child):not(.weekend):not(.rowSpacer) {
+        cursor: pointer;
+        filter: brightness(85%);
+    }
+}
+
+.rowSpacer {
+    height: 41px;
+    background: rgba(0,0,0, 0.05);
 }
 
 .rowHeader {
@@ -9,8 +16,4 @@ td:hover:not(:first-child) {
 
 .weekend {
     background-color: lightyellow;
-
-    &:hover {
-        cursor: default !important;
-    }
 }

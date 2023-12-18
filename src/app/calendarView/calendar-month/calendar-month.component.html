@@ -1,11 +1,14 @@
-<table class="table text-center border mx-auto mt-2">
+<table class="table text-center border mx-auto mt-2" *ngIf="monthData != null">
     <thead>
-        <tr app-calendar-month-week-header [monthName]="monthName"></tr>
+        <tr app-calendar-month-week-header [monthName]="monthData.monthName"></tr>
     </thead>
     <tbody>
-        <tr app-calendar-month-week></tr>
-        <tr app-calendar-month-week></tr>
-        <tr app-calendar-month-week></tr>
-        <tr app-calendar-month-week></tr>
+
+     <ng-container *ngFor="let week of monthData.weeks">
+         <tr app-calendar-month-week [week]="week"></tr>
+     </ng-container>
+    <ng-container *ngIf="monthData.weeks.length < 6">
+        <tr app-calendar-month-week [week]="null"></tr>
+    </ng-container>
     </tbody>
 </table>

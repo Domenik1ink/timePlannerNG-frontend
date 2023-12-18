@@ -1,3 +1,5 @@
 <div class="container">
-    <app-calendar-monthRow *ngFor="let item of [0,1,2,3]"></app-calendar-monthRow>
+    <app-calendar-monthRow *ngFor="let item of [0,3,6,9]" [startMonth]="item" [yearJSON]="yearJSON"></app-calendar-monthRow>
 </div>
+
+

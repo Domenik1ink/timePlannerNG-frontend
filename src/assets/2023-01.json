@@ -1,0 +1,56 @@
+{
+    "2023-07-03": {
+        "date":"2023-07-03",
+        "start":"08:30",
+        "end":"16:00",
+        "break":"0:30",
+        "break_num": 0.5,
+        "tasks": [
+            {
+                "name":"Aldi",
+                "projectId":"a_weiterentwicklung",
+                "duration": 3.5,
+                "isBillable": true
+            },
+            {
+                "name":"Aldi - Scrum",
+                "projectId":"a_scrum",
+                "duration": 0.5,
+                "isBillable": true
+            },
+            {
+                "name":"Leerzeiten",
+                "projectId":"mms_leerzeiten",
+                "duration": 1.0,
+                "isBillable": false
+           }
+        ]
+    },
+    "2023-07-04": {
+        "date":"2023-07-03",
+        "start":"08:30",
+        "end":"16:00",
+        "break":"0:30",
+        "break_num": 0.5,
+        "tasks": [
+            {
+                "name":"Aldi",
+                "projectId":"a_weiterentwicklung",
+                "duration": 3.5,
+                "isBillable": true
+            },
+            {
+                "name":"Aldi - Scrum",
+                "projectId":"a_scrum",
+                "duration": 0.5,
+                "isBillable": true
+            },
+            {
+                "name":"Leerzeiten",
+                "projectId":"mms_leerzeiten",
+                "duration": 1.0,
+                "isBillable": false
+           }
+        ]
+    }
+}

@@ -12,5 +12,8 @@ import {CalendarComponent} from "./calendarView/calendar/calendar.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title:string = 'timeplannerAngular';
+    title:string = 'timeplannerAngular';
+
+
+
 }

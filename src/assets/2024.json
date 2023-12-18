@@ -1,0 +1,57 @@
+{
+    "2024-01-01": {
+        "event": "Neujahr",
+        "category": "holiday",
+        "createdDate": "2023-07-05 16:08"
+    },
+    "2024-03-29": {
+        "event": "Karfreitag",
+        "category": "holiday",
+        "createdDate": "2023-07-05 16:08"
+    },
+    "2024-04-01": {
+        "event": "Ostermontag",
+        "category": "holiday",
+        "createdDate": "2023-07-05 16:08"
+    },
+    "2024-05-01": {
+        "event": "Tag der Arbeit",
+        "category": "holiday",
+        "createdDate": "2023-07-05 16:08"
+    },
+    "2024-05-09": {
+        "event": "Christi Himmelfahrt",
+        "category": "holiday",
+        "createdDate": "2023-07-05 16:08"
+    },
+    "2024-05-20": {
+        "event": "Pfingstmontag",
+        "category": "holiday",
+        "createdDate": "2023-07-05 16:08"
+    },
+    "2024-10-03": {
+        "event": "Tag der Deutschen Einheit",
+        "category": "holiday",
+        "createdDate": "2023-07-05 16:08"
+    },
+    "2024-10-31": {
+        "event": "Reformationstag",
+        "category": "holiday",
+        "createdDate": "2023-07-05 16:08"
+    },
+    "2024-11-20": {
+        "event": "Buß- und Bettag",
+        "category": "holiday",
+        "createdDate": "2023-07-05 16:08"
+    },
+    "2024-12-25": {
+        "event": "Erster Weihnachtstag",
+        "category": "holiday",
+        "createdDate": "2023-07-05 16:08"
+    },
+    "2024-12-26": {
+        "event": "Zweiter Weihnachtstag",
+        "category": "holiday",
+        "createdDate": "2023-07-05 16:08"
+    }
+}
