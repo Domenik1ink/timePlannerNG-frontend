@@ -12,7 +12,7 @@ import {CalendarComponent} from "./calendarView/calendar/calendar.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-    title:string = 'timeplannerAngular';
+    title:string = 'timePlannerNG-frontend';
 
 
 
