@@ -1,25 +1,21 @@
-import {Inject, Injectable} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import { DOCUMENT } from '@angular/common';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ApiHandlerService {
-    domain:string = "localhost";
-    port:number = 4201;
+    isDev:boolean = true;
     endpoint:string = '';
 
 
-    constructor(private httpClient:HttpClient, @Inject(DOCUMENT) private document:any) {
-        this.domain = this.document.location.hostname;
-        if(this.domain === 'localhost') {
-            this.domain = 'http://' + this.domain;
-        } else{
-            this.domain = 'https://'  + this.domain;
+    constructor(private httpClient:HttpClient) {
+        if(this.isDev) {
+            this.endpoint = 'http://localhost:4201';
+        } else {
+            this.endpoint = 'https://timeplanner.dark1ink.de:4201';
         }
-        this.endpoint = this.domain + ':' + this.port;
     }
 
     getCalendar(year:number):Observable<MonthDto[]> {
