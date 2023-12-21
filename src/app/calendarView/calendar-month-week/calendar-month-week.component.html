@@ -1,10 +1,10 @@
 <ng-container *ngIf="week != null">
     <td class="rowHeader">{{ week.weekName }}</td>
-    <td>{{ week.dates[0] | date:"dd" }}</td>
-    <td>{{ week.dates[1] | date:"dd" }}</td>
-    <td>{{ week.dates[2] | date:"dd" }}</td>
-    <td>{{ week.dates[3] | date:"dd" }}</td>
-    <td>{{ week.dates[4] | date:"dd" }}</td>
+    <td (click)="openMenu(editDayModal, week.dates[0])" id="date_{{ week.dates[0] | date:'YYYY-MM-dd' }}">{{ week.dates[0] | date:"dd" }}</td>
+    <td (click)="openMenu(editDayModal, week.dates[1])" id="date_{{ week.dates[0] | date:'YYYY-MM-dd' }}">{{ week.dates[1] | date:"dd" }}</td>
+    <td (click)="openMenu(editDayModal, week.dates[2])" id="date_{{ week.dates[0] | date:'YYYY-MM-dd' }}">{{ week.dates[2] | date:"dd" }}</td>
+    <td (click)="openMenu(editDayModal, week.dates[3])" id="date_{{ week.dates[0] | date:'YYYY-MM-dd' }}">{{ week.dates[3] | date:"dd" }}</td>
+    <td (click)="openMenu(editDayModal, week.dates[4])" id="date_{{ week.dates[0] | date:'YYYY-MM-dd' }}">{{ week.dates[4] | date:"dd" }}</td>
     <td class="weekend">{{ week.dates[5] | date:"dd" }}</td>
     <td class="weekend">{{ week.dates[6] | date:"dd" }}</td>
 </ng-container>
@@ -19,10 +19,10 @@
     <td class="rowSpacer"></td>
 </ng-container>
 
-<!--
-<ng-template #content let-modal>
+
+<ng-template #editDayModal let-modal>
     <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">Edit day</h4>
+        <h4 class="modal-title" id="modal-basic-title">Edit day - {{ selectedDateString }}</h4>
         <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
     <div class="modal-body">
@@ -31,4 +31,3 @@
         <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
     </div>
 </ng-template>
--->

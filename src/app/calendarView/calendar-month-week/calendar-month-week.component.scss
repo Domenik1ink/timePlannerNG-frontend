@@ -1,3 +1,4 @@
+@import "../../../scss_vars";
 td {
     &:hover:not(:first-child):not(.weekend):not(.rowSpacer) {
         cursor: pointer;
@@ -7,13 +8,13 @@ td {
 
 .rowSpacer {
     height: 41px;
-    background: rgba(0,0,0, 0.05);
+    background: $cal-table-header;
 }
 
 .rowHeader {
-    background: rgba(0,0,0, 0.05);
+    background: $cal-table-header;
 }
 
 .weekend {
-    background-color: lightyellow;
+    background-color: $cal-event-weekend;
 }

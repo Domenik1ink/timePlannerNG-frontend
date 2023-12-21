@@ -10,7 +10,7 @@ import {NgIf} from "@angular/common";
         NgIf
     ],
   templateUrl: './calendar-month-row.component.html',
-  styleUrl: './calendar-monthRow.component.css'
+  styleUrl: './calendar-monthRow.component.scss'
 })
 export class CalendarMonthRowComponent {
     @Input() startMonth: number = 0;

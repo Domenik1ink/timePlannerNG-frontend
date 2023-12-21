@@ -14,7 +14,7 @@ import {ApiHandlerService, MonthDto} from "../../api-handler.service";
         NgIf
     ],
   templateUrl: './calendar-month.component.html',
-  styleUrl: './calendar-month.component.css'
+  styleUrl: './calendar-month.component.scss'
 })
 export class CalendarMonthComponent {
     @Input()

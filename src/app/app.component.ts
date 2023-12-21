@@ -9,7 +9,7 @@ import {CalendarComponent} from "./calendarView/calendar/calendar.component";
   standalone: true,
   imports: [CommonModule, RouterOutlet, NavbarComponent, CalendarComponent, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
     title:string = 'timeplannerAngular';

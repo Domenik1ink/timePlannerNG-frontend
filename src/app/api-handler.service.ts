@@ -13,14 +13,8 @@ export class ApiHandlerService {
         return this.httpClient.request<MonthDto[]>("GET", "http://localhost:8080/getCalendar?year=" + year);
     }
 
-    async getCalenderForMonth(year:number, month:number):Promise<MonthDto> {
-        return new Promise(resolve => {
-            this.getCalendar(year).subscribe(data => {
-                console.log(data);
-                resolve(data[month]);
-            });
-        });
-
+    getCalendarEvents(year:number):Observable<EventDto> {
+        return this.httpClient.request<EventDto>("GET", "http://localhost:8080/getYearEvents?year=" + year)
     }
 }
 
@@ -33,4 +27,11 @@ export interface MonthDto{
 export interface WeekDto {
     weekName:string,
     dates:Date[]
+}
+
+export interface EventDto {
+    eventDate:Date;
+    eventName:string,
+    category:string,
+    createdDate:Date
 }

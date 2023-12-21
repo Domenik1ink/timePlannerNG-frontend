@@ -1,4 +1,4 @@
-import {Component, Input, TemplateRef} from '@angular/core';
+import {Component, inject, Input, TemplateRef} from '@angular/core';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {ModalDismissReasons, NgbInputDatepicker, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {WeekDto} from "../../api-handler.service";
@@ -9,20 +9,24 @@ import {DatePipe, NgIf} from "@angular/common";
   standalone: true,
     imports: [HttpClientModule, NgbInputDatepicker, NgIf, DatePipe],
   templateUrl: './calendar-month-week.component.html',
-  styleUrl: './calendar-month-week.component.css'
+  styleUrl: './calendar-month-week.component.scss'
 })
 
 export class CalendarMonthWeekComponent {
     @Input()
     week:WeekDto|null = null;
+    selectedDateString:string = "";
 
-    /**
-     * MODAL
-     *
-    closeResult = '';
+    private modalService:NgbModal = inject(NgbModal);
+    closeResult:string = '';
 
-    open(content: TemplateRef<any>) {
-        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
+    openMenu(editDayModal: TemplateRef<any>, selectedDate:Date) {
+        const dateVal:number = Date.parse(selectedDate.toString());
+        const currentDate:Date = new Date(dateVal);
+
+        this.selectedDateString = currentDate.toLocaleDateString("de-DE", {day: '2-digit', month: '2-digit', year: 'numeric'});
+
+        this.modalService.open(editDayModal, { ariaLabelledBy: 'modal-basic-title' }).result.then(
             (result) => {
                 this.closeResult = `Closed with: ${result}`;
             },
@@ -42,6 +46,5 @@ export class CalendarMonthWeekComponent {
                 return `with: ${reason}`;
         }
     }
- */
 }
 

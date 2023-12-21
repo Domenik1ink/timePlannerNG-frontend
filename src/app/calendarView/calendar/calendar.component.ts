@@ -14,21 +14,22 @@ import {ModalDismissReasons, NgbInputDatepicker, NgbModal} from "@ng-bootstrap/n
     ],
     providers: [ApiHandlerService],
     templateUrl: './calendar.component.html',
-    styleUrl: './calendar.component.css'
+    styleUrl: './calendar.component.scss'
 })
 
 export class CalendarComponent {
     yearJSON:any;
-    editDayModal_title:string = "default";
-    editDayModal_body:string = "default";
 
-    constructor(private apiHandler: ApiHandlerService, private modalService:NgbModal) {
+    constructor(private apiHandler: ApiHandlerService) {
         this.initCalendar();
     }
 
     initCalendar() {
         this.apiHandler.getCalendar(2023).subscribe(value => {
             this.yearJSON = value;
+        })
+        this.apiHandler.getCalendarEvents(2023).subscribe(value => {
+            console.log(value);
         })
     }
 

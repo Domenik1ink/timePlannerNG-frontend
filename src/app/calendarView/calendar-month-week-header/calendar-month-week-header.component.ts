@@ -5,7 +5,7 @@ import {Component, Input} from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './calendar-month-week-header.component.html',
-  styleUrl: './calendar-month-week-header.component.css'
+  styleUrl: './calendar-month-week-header.component.scss'
 })
 export class CalendarMonthWeekHeaderComponent {
     @Input()
