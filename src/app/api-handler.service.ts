@@ -14,7 +14,7 @@ export class ApiHandlerService {
         if(this.isDev) {
             this.endpoint = 'http://localhost:4201';
         } else {
-            this.endpoint = 'https://timeplanner.dark1ink.de:4201';
+            this.endpoint = 'https://dark1ink.de:4201';
         }
     }
 
