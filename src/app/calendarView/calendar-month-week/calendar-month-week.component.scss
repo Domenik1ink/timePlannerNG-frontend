@@ -15,6 +15,32 @@ td {
     background: $cal-table-header;
 }
 
+.today {
+    background-color: $cal-today-bg !important;
+    color: $cal-today-color !important;
+    font-weight: bold !important;
+}
+
 .weekend {
     background-color: $cal-event-weekend;
+}
+
+.vacation {
+    background-color: $cal-event-vacation;
+}
+
+.ill {
+    background-color: $cal-event-ill;
+}
+
+.holiday {
+    background-color: $cal-event-holiday;
+}
+
+.planned_vacation {
+    background-color: $cal-event-planned_vacation;
+}
+
+.event_overlapping {
+    opacity: 0.3;
 }

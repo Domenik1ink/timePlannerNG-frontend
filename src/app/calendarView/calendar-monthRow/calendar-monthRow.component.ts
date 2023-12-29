@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {CalendarMonthComponent} from "../calendar-month/calendar-month.component";
 import {NgIf} from "@angular/common";
+import {EventDto} from "../../api-handler.service";
 
 @Component({
   selector: 'app-calendar-monthRow',
@@ -15,7 +16,5 @@ import {NgIf} from "@angular/common";
 export class CalendarMonthRowComponent {
     @Input() startMonth: number = 0;
     @Input() yearJSON: any = null;
-
-
-    year:number = 2023;
+    @Input() eventsData:EventDto[] = [];
 }

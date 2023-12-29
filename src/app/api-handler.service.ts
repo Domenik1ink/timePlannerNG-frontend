@@ -19,28 +19,42 @@ export class ApiHandlerService {
     }
 
     getCalendar(year:number):Observable<MonthDto[]> {
-        return this.httpClient.request<MonthDto[]>("GET", `${this.endpoint}/getCalendar?year=${year}`);
+        return this.httpClient.request<MonthDto[]>("GET", `${this.endpoint}/cal/getCalendar?year=${year}`);
     }
 
-    getCalendarEvents(year:number):Observable<EventDto> {
-        return this.httpClient.request<EventDto>("GET", `${this.endpoint}/getYearEvents?year=${year}`)
+    getCalendarEvents(username:string, year:number):Observable<EventDto[]> {
+        return this.httpClient.request<EventDto[]>("GET", `${this.endpoint}/cal/getYearEvents?year=${year}&username=${username}`);
+    }
+
+    validateLogin(username:string, password:string):Observable<LoginDto> {
+        return this.httpClient.request<LoginDto>("GET", `${this.endpoint}/login/validate?username=${username}&password=${password}`);
+    }
+
+    getUserFromDB():Observable<string> {
+        return this.httpClient.request<string>("GET", `${this.endpoint}/testDB`);
     }
 }
 
 
 export interface MonthDto{
     monthName:string;
-    weeks:WeekDto[]
+    weeks:WeekDto[];
 }
 
 export interface WeekDto {
-    weekName:string,
-    dates:Date[]
+    weekName:string;
+    dates:Date[];
 }
 
 export interface EventDto {
-    eventDate:Date;
-    eventName:string,
-    category:string,
-    createdDate:Date
+    event_date:Date;
+    event_name:string;
+    event_category:string;
+    created_date:Date;
+}
+
+export interface LoginDto {
+    code:number;
+    status:string;
+    error:string;
 }

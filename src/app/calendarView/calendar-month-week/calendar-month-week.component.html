@@ -1,10 +1,31 @@
 <ng-container *ngIf="week != null">
+
     <td class="rowHeader">{{ week.weekName }}</td>
-    <td (click)="openMenu(editDayModal, week.dates[0])" id="date_{{ week.dates[0] | date:'YYYY-MM-dd' }}">{{ week.dates[0] | date:"dd" }}</td>
-    <td (click)="openMenu(editDayModal, week.dates[1])" id="date_{{ week.dates[0] | date:'YYYY-MM-dd' }}">{{ week.dates[1] | date:"dd" }}</td>
-    <td (click)="openMenu(editDayModal, week.dates[2])" id="date_{{ week.dates[0] | date:'YYYY-MM-dd' }}">{{ week.dates[2] | date:"dd" }}</td>
-    <td (click)="openMenu(editDayModal, week.dates[3])" id="date_{{ week.dates[0] | date:'YYYY-MM-dd' }}">{{ week.dates[3] | date:"dd" }}</td>
-    <td (click)="openMenu(editDayModal, week.dates[4])" id="date_{{ week.dates[0] | date:'YYYY-MM-dd' }}">{{ week.dates[4] | date:"dd" }}</td>
+    <td (click)="openMenu(editDayModal, week.dates[0])"
+        id="date_{{ week.dates[0] | date:'YYYY-MM-dd' }}"
+        [ngClass]="{'vacation': isVacation(week.dates[0]),'ill': isIll(week.dates[0]),'holiday': isHoliday(week.dates[0]),'planned_vacation': isPlannedVacation(week.dates[0]),'today': isToday(week.dates[0])}"
+    >{{ week.dates[0] | date:"dd" }}
+    </td>
+    <td (click)="openMenu(editDayModal, week.dates[1])"
+        id="date_{{ week.dates[1] | date:'YYYY-MM-dd' }}"
+        [ngClass]="{'vacation': isVacation(week.dates[1]),'ill': isIll(week.dates[1]),'holiday': isHoliday(week.dates[1]),'planned_vacation': isPlannedVacation(week.dates[1]),'today': isToday(week.dates[1])}"
+    >{{ week.dates[1] | date:"dd" }}
+    </td>
+    <td (click)="openMenu(editDayModal, week.dates[2])"
+        id="date_{{ week.dates[2] | date:'YYYY-MM-dd' }}"
+        [ngClass]="{'vacation': isVacation(week.dates[2]),'ill': isIll(week.dates[2]),'holiday': isHoliday(week.dates[2]),'planned_vacation': isPlannedVacation(week.dates[2]),'today': isToday(week.dates[2])}"
+    >{{ week.dates[2] | date:"dd" }}
+    </td>
+    <td (click)="openMenu(editDayModal, week.dates[3])"
+        id="date_{{ week.dates[3] | date:'YYYY-MM-dd' }}"
+        [ngClass]="{'vacation': isVacation(week.dates[3]),'ill': isIll(week.dates[3]),'holiday': isHoliday(week.dates[3]),'planned_vacation': isPlannedVacation(week.dates[3]),'today': isToday(week.dates[3])}"
+    >{{ week.dates[3] | date:"dd" }}
+    </td>
+    <td (click)="openMenu(editDayModal, week.dates[4])"
+        id="date_{{ week.dates[4] | date:'YYYY-MM-dd' }}"
+        [ngClass]="{'vacation': isVacation(week.dates[4]),'ill': isIll(week.dates[4]),'holiday': isHoliday(week.dates[4]),'planned_vacation': isPlannedVacation(week.dates[4]),'today': isToday(week.dates[4])}"
+    >{{ week.dates[4] | date:"dd" }}
+    </td>
     <td class="weekend">{{ week.dates[5] | date:"dd" }}</td>
     <td class="weekend">{{ week.dates[6] | date:"dd" }}</td>
 </ng-container>

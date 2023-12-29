@@ -1,2 +1,10 @@
-$cal-table-header: rgba(0,0,0, 0.05);
-$cal-event-weekend : lightyellow;
+$cal-table-header: rgba(0, 0, 0, 0.05);
+
+$cal-today-bg: lightcoral;
+$cal-today-color: red;
+
+$cal-event-weekend: lightyellow;
+$cal-event-vacation: orange;
+$cal-event-ill: grey;
+$cal-event-holiday: green;
+$cal-event-planned_vacation: brown;
