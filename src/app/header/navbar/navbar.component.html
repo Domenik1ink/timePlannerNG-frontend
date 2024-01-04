@@ -1,23 +1,27 @@
+<!--
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" [routerLink]="'/'">TimePlanner</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="navbar-brand mr-5" [routerLink]="'/'">TimePlanner</a>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="'/calendar'" [routerLinkActive]="'active'" aria-current="page">Calendar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="'/month'" [routerLinkActive]="'active'" aria-current="page">Month</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="'/timeTracking'" [routerLinkActive]="'active'" aria-current="page">TimeTracking</a>
-                </li>
-            </ul>
+
         </div>
     </div>
 </nav>
-
-
+-->
+<div class="nav d-flex justify-content-center align-items-center pb-2">
+    <img alt='TimePlanner logo' src="assets/icon_calendar.png" width="40">
+    <h4 class="pt-1">TimePlanner</h4>
+</div>
+<ul class="nav nav-tabs nav-fill justify-content-center">
+    <li class="nav-item ">
+        <a class="nav-link" [routerLink]="'/calendar'" [routerLinkActive]="'active'" aria-current="page">Calendar</a>
+    </li>
+    <!--
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/month'" [routerLinkActive]="'active'" aria-current="page">Month View</a>
+    </li>
+    -->
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/timeTracking'" [routerLinkActive]="'active'" aria-current="page">TimeTracking</a>
+    </li>
+</ul>

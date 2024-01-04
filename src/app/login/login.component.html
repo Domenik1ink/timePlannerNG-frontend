@@ -26,7 +26,7 @@
                     <img src="assets/icon_calendar.png" alt="timeplanner">
                     <h2 >TimePlanner</h2>
                 </div>
-                <form class="p-3 border rounded fbg">
+                <form class="p-3 border rounded fbg" (keyup.enter)="login()" (submit)="login()">
                     <div class="mb-3">
                         <label for="username" class="form-label">Username:</label>
                         <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username"

@@ -1,7 +1,8 @@
-import {Component, TemplateRef} from '@angular/core';
+import {Component,} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {ApiHandlerService} from "../api-handler.service";
-import {NgbModal, NgbToast} from "@ng-bootstrap/ng-bootstrap";
+import {NgbToast} from "@ng-bootstrap/ng-bootstrap";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-login',
@@ -24,7 +25,7 @@ export class LoginComponent {
     show = false;
     autoHide = true;
 
-    constructor(private apiHandler: ApiHandlerService, private modalService: NgbModal) {}
+    constructor(private apiHandler: ApiHandlerService, private router: Router) {}
 
     login() {
         this.hiddenClass = '';
@@ -35,6 +36,8 @@ export class LoginComponent {
                 this.toastType = 'text-bg-success';
                 this.toastBody = 'Correct!';
                 this.show = true;
+                sessionStorage.setItem("username", this.username);
+                this.router.navigate(['/calendar']);
             } else {
                 this.toastType = 'text-bg-danger';
                 this.toastBody = 'Wrong credentials!';

@@ -9,7 +9,6 @@ export class ApiHandlerService {
     isDev:boolean = true;
     endpoint:string = '';
 
-
     constructor(private httpClient:HttpClient) {
         if(this.isDev) {
             this.endpoint = 'http://localhost:4201';
@@ -30,8 +29,8 @@ export class ApiHandlerService {
         return this.httpClient.request<LoginDto>("GET", `${this.endpoint}/login/validate?username=${username}&password=${password}`);
     }
 
-    getUserFromDB():Observable<string> {
-        return this.httpClient.request<string>("GET", `${this.endpoint}/testDB`);
+    getStandardPositions():Observable<TimeTrackPosDto[]> {
+        return this.httpClient.request<TimeTrackPosDto[]>("GET", `${this.endpoint}/timetrack/getStandardPositions`);
     }
 }
 
@@ -57,4 +56,13 @@ export interface LoginDto {
     code:number;
     status:string;
     error:string;
+}
+
+export interface  TimeTrackPosDto {
+    pos_id:string;
+    is_billable:boolean;
+    pos_name:string;
+    is_standard:boolean;
+    order_index:number;
+    pos_styling:string;
 }

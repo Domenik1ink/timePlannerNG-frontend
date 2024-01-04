@@ -1,2 +1,158 @@
 <app-navbar>Loading...</app-navbar>
-<p>time-tracking works!</p>
+
+<div class="p-4">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <ng-container *ngFor="let item of standardPositions">
+                <th class="text-center {{item.pos_styling}}">{{ item.pos_name }}</th>
+            </ng-container>
+
+            <th class="text-center table-danger">Check</th>
+
+            <th class="text-center table-info">ALDI</th>
+            <th class="text-center table-info">ALDI - Scrum</th>
+            <th class="text-center table-info">Hays</th>
+            <th class="text-center table-info">Hays Syncs</th>
+            <th class="text-center table-info">ILO Profit</th>
+            <th class="text-center table-info">VfB</th>
+            <th class="text-center table-info">Telekom PK</th>
+            <th class="text-center table-info">Rothenberger</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="table-light">Montag, 01.01.2023</td>
+            <td contenteditable class="text-center table-light">08:30</td>
+            <td contenteditable class="text-center table-light">17:00</td>
+            <td contenteditable class="text-center table-light">08:00</td>
+            <td contenteditable class="text-center table-light">08,00</td>
+            <td contenteditable class="text-center table-light">00:36</td>
+            <td contenteditable class="text-center table-warning"></td>
+            <td contenteditable class="text-center table-warning"></td>
+            <td contenteditable class="text-center table-warning"></td>
+            <td contenteditable class="text-center table-warning"></td>
+            <td contenteditable class="text-center table-secondary"></td>
+            <td contenteditable class="text-center table-secondary">1,50</td>
+            <td contenteditable class="text-center table-secondary">1,00</td>
+            <td contenteditable class="text-center table-secondary"></td>
+            <td contenteditable class="text-center table-primary"></td>
+            <td contenteditable class="text-center table-primary"></td>
+            <td contenteditable class="text-center table-info">3,50</td>
+            <td contenteditable class="text-center table-info">0,50</td>
+            <td contenteditable class="text-center table-info"></td>
+            <td contenteditable class="text-center table-info"></td>
+            <td contenteditable class="text-center table-info"></td>
+            <td contenteditable class="text-center table-info">0,50</td>
+            <td contenteditable class="text-center table-info"></td>
+            <td contenteditable class="text-center table-info"></td>
+        </tr>
+        <tr>
+            <td>Dienstag, 02.01.2023</td>
+            <td class="text-center table-light">08:30</td>
+            <td class="text-center table-light">17:00</td>
+            <td class="text-center table-light">08:00</td>
+            <td class="text-center table-light">08,00</td>
+            <td class="text-center table-light">00:36</td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-secondary"></td>
+            <td class="text-center table-secondary">1,50</td>
+            <td class="text-center table-secondary">1,00</td>
+            <td class="text-center table-secondary"></td>
+            <td class="text-center table-primary"></td>
+            <td class="text-center table-primary"></td>
+            <td class="text-center table-info">3,50</td>
+            <td class="text-center table-info">0,50</td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info">0,50</td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info"></td>
+        </tr>
+        <tr>
+            <td>Mittwoch, 03.01.2023</td>
+            <td class="text-center table-light">08:30</td>
+            <td class="text-center table-light">17:00</td>
+            <td class="text-center table-light">08:00</td>
+            <td class="text-center table-light">08,00</td>
+            <td class="text-center table-light">00:36</td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-secondary"></td>
+            <td class="text-center table-secondary">1,50</td>
+            <td class="text-center table-secondary">1,00</td>
+            <td class="text-center table-secondary"></td>
+            <td class="text-center table-primary"></td>
+            <td class="text-center table-primary"></td>
+            <td class="text-center table-info">3,50</td>
+            <td class="text-center table-info">0,50</td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info">0,50</td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info"></td>
+        </tr>
+        <tr>
+            <td>Donnerstag, 04.01.2023</td>
+            <td class="text-center table-light">08:30</td>
+            <td class="text-center table-light">17:00</td>
+            <td class="text-center table-light">08:00</td>
+            <td class="text-center table-light">08,00</td>
+            <td class="text-center table-light">00:36</td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-secondary"></td>
+            <td class="text-center table-secondary">1,50</td>
+            <td class="text-center table-secondary">1,00</td>
+            <td class="text-center table-secondary"></td>
+            <td class="text-center table-primary"></td>
+            <td class="text-center table-primary"></td>
+            <td class="text-center table-info">3,50</td>
+            <td class="text-center table-info">0,50</td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info">0,50</td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info"></td>
+        </tr>
+        <tr>
+            <td>Freitag, 05.01.2023</td>
+            <td class="text-center table-light">08:30</td>
+            <td class="text-center table-light">17:00</td>
+            <td class="text-center table-light">08:00</td>
+            <td class="text-center table-light">08,00</td>
+            <td class="text-center table-light">00:36</td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-warning"></td>
+            <td class="text-center table-secondary"></td>
+            <td class="text-center table-secondary">1,50</td>
+            <td class="text-center table-secondary">1,00</td>
+            <td class="text-center table-secondary"></td>
+            <td class="text-center table-primary"></td>
+            <td class="text-center table-primary"></td>
+            <td class="text-center table-info">3,50</td>
+            <td class="text-center table-info">0,50</td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info">0,50</td>
+            <td class="text-center table-info"></td>
+            <td class="text-center table-info"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
